@@ -1,0 +1,30 @@
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">The Mongo Tech Times</h1>
+        <a class="btn btn-danger btn-lg" id="scrape">Scrape</a>>
+    </div>
+</div>
+
+<div class="container-fluid articles">
+    {{#each dbArticles}}
+    <div class="article-list">
+        <h3>{{this.title}}</h3>
+        <p>{{this.summary}}</p>
+        <a href="{{this.link}}" target="_blank"> View Article </a>
+        <button type="button" class="btn-note btn btn-secondary" data-id="{{this._id}}">Leave a Note</button>
+    </div>
+    {{/each}}
+
+</div>
+<footer class="footer">
+    <div class="container">
+        <p>2019 | Mongo Scraper Times by Caroline Sekercan</p>
+    </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+<script src="/assets/js/index.js"></script>
